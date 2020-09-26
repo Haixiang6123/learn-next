@@ -2,6 +2,13 @@ import path from 'path'
 import fs, {promises as fsPromise} from 'fs'
 import matter from 'gray-matter'
 
+export type TPost = {
+  id: string;
+  title: string;
+  data: string;
+  content: string;
+}
+
 export const getPosts = async () => {
   const markdownDir = path.join(process.cwd(), 'markdown');
 
