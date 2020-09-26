@@ -2169,7 +2169,7 @@ figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "http://mirrors.tencent.com/npm/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
 
-file-loader@^6.0.0, file-loader@^6.1.0:
+file-loader@^6.0.0:
   version "6.1.0"
   resolved "http://mirrors.tencent.com/npm/file-loader/-/file-loader-6.1.0.tgz#65b9fcfb0ea7f65a234a1f10cdd7f1ab9a33f253"
   dependencies:
