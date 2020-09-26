@@ -1,5 +1,5 @@
 import React from "react"
-import styles from 'styles/first-post.module.css'
+import styles from 'styles/first-post.module.scss'
 
 const FirstPost = () => {
   return (
