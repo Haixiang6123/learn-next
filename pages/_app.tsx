@@ -1,8 +1,8 @@
-import React from "react"
+import React, {FC} from 'react'
 import Head from "next/head"
 import 'styles/globals.scss'
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: {Component: FC, pageProps: any}) => {
   return (
     <div>
       <Head>
