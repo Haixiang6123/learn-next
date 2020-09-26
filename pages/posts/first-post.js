@@ -1,10 +1,10 @@
 import React from "react"
-import Link from "next/link"
+import styles from 'styles/first-post.module.css'
 
 const FirstPost = () => {
   return (
-    <div>
-      <Link href="/">回到首页</Link>
+    <div className={styles.wrapper}>
+      <div className={styles.wrapper}>content</div>
     </div>
   )
 }

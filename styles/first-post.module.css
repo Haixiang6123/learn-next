@@ -1,0 +1,8 @@
+.wrapper {
+    background: red;
+    border: 1px solid black;
+}
+
+.content {
+    padding: 10px;
+}
