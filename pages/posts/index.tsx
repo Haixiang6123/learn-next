@@ -1,25 +1,32 @@
 import * as React from 'react'
-import {NextPage} from 'next'
-import usePosts from '../../hooks/usePosts'
+import {GetStaticProps, NextPage} from 'next'
+import {getPosts, TPost} from '../../lib/posts'
 
 interface IProps {
+  posts: TPost[]
 }
 
-const PostsIndex: NextPage<IProps> = () => {
-  const {isLoading, isEmpty, posts} = usePosts()
+const PostsIndex: NextPage<IProps> = (props) => {
+  const {posts} = props
 
   return (
     <div>
       <h1>文章列表</h1>
-      {
-        isLoading ? <span>加载中</span> :
-          isEmpty ? <span>空列表的</span> :
-            posts.map(p => (
-              <div key={p.id}>{p.id}</div>
-            ))
-      }
+      {posts.map(p => (
+        <div key={p.id}>{p.id}</div>
+      ))}
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getPosts()
+
+  return {
+    props: {
+      posts
+    }
+  }
 }
 
 export default PostsIndex
