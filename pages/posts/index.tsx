@@ -1,25 +1,12 @@
 import * as React from 'react'
 import {NextPage} from 'next'
-import axios from 'axios'
-import {useEffect, useState} from 'react'
-import {TPost} from '../../lib/posts'
+import usePosts from '../../hooks/usePosts'
 
 interface IProps {
 }
 
 const PostsIndex: NextPage<IProps> = () => {
-  const [posts, setPosts] = useState<TPost[]>([])
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [isEmpty, setIsEmpty] = useState<boolean>(true)
-
-  useEffect(() => {
-    axios.get('/api/v1/posts')
-      .then((response) => {
-        setPosts(response.data)
-        setIsLoading(false)
-        setIsEmpty(response.data.length === 0)
-      })
-  }, [])
+  const {isLoading, isEmpty, posts} = usePosts()
 
   return (
     <div>
