@@ -1,7 +1,7 @@
 import React from "react"
 import styles from '../styles/Home.module.scss'
 import Link from "next/link"
-import jpg from 'assets/images/logo.jpg';
+import jpg from "assets/images/logo.jpg";
 
 const Home = () => {
   return (
